@@ -6,7 +6,7 @@ import { getBillList } from '@/store/modules/billStore'
 
 export const useBillList = () => {
   const dispatch = useDispatch()
-  const { billList } = useSelector(state => state.bill.billList)
+  const { billList } = useSelector(state => state.bill)
 
   useEffect(() => {
     dispatch(getBillList())
