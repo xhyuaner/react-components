@@ -104,6 +104,13 @@
       "money": 16000,
       "date": "2024-01-30T10:38:15.000Z",
       "useFor": "salary"
+    },
+    {
+      "id": "16d3",
+      "type": "pay",
+      "money": -88,
+      "date": "2023-06-22T11:32:42.000Z",
+      "useFor": "drinks"
     }
   ]
 }

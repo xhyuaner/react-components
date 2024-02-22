@@ -18,13 +18,13 @@ const BillAll = () => {
   const overview = getOverview(selectedYearBills)
   const thisYear = dayjs().get('year')
   const maxMonth = thisYear === selectedYear ? dayjs().get('month') + 1 : 12
-  const monthBillList = new Array(maxMonth)
+  const monthList = new Array(maxMonth)
     .fill('')
     .map((_, month) => {
       return getMonthOverview(selectedYearBills, month)
     })
     .reverse()
-
+  const monthBillList = monthList.filter(item => item.pay !== 0 || item.income !== 0)
   return (
     <div className="billDetail">
       <NavBar className="nav" backArrow={false}>
@@ -57,7 +57,7 @@ const BillAll = () => {
               className="monthBill"
               key={index}
             >
-              <div className="date">{maxMonth - index}月</div>
+              <div className="date">{dayjs(item.date).format("MM")}月</div>
               <OneLineOverview pay={item.pay} income={item.income} />
             </div>
           )
