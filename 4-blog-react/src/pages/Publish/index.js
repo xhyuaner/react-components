@@ -71,7 +71,7 @@ const Publish = () => {
   const [imageType, setImageType] = useState(0)
   const onTypeChange = (e) => {
     console.log('切换封面了', e.target.value)
-    setImageType(e.target.value)
+    setImageType(+e.target.value)
   }
 
   // 回填数据
@@ -141,6 +141,7 @@ const Publish = () => {
               {channelList.map(item => <Option key={item.id} value={item.id}>{item.name}</Option>)}
             </Select>
           </Form.Item>
+
           <Form.Item label="封面">
             <Form.Item name="type">
               <Radio.Group onChange={onTypeChange}>
@@ -167,6 +168,7 @@ const Publish = () => {
               </div>
             </Upload>}
           </Form.Item>
+
           <Form.Item
             label="内容"
             name="content"
