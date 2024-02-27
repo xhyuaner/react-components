@@ -1,5 +1,5 @@
 {
-  "name": "6-react-ts-pro",
+  "name": "6-blogpro-react-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,9 +12,11 @@
   "dependencies": {
     "antd-mobile": "^5.34.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
+    "@types/node": "^20.11.20",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
